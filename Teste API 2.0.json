@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "96879b2e-623b-49b6-8f72-5c1ed580d346",
+		"name": "Teste API 2.0",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30401850"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Novo Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 5,\r\n  \"idade\": 20,\r\n  \"nome\": \"Rafael Ferreira Melo\",\r\n  \"risco\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ClienteAPI}}/cliente",
+					"host": [
+						"{{ClienteAPI}}"
+					],
+					"path": [
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pegar todos os clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ClienteAPI}}/",
+					"host": [
+						"{{ClienteAPI}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pegar Cliente Pelo ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ClienteAPI}}/cliente/1",
+					"host": [
+						"{{ClienteAPI}}"
+					],
+					"path": [
+						"cliente",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Dados Do Cliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 2,\r\n  \"idade\": 58,\r\n  \"nome\": \"Valdecy Ferreira Batista de Melo\",\r\n  \"risco\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{ClienteAPI}}/cliente",
+					"host": [
+						"{{ClienteAPI}}"
+					],
+					"path": [
+						"cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Cliente Pelo ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{ClienteAPI}}/cliente/3",
+					"host": [
+						"{{ClienteAPI}}"
+					],
+					"path": [
+						"cliente",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pegar Risco Pelo ID",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "senha",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "aluno",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ClienteAPI}}/risco/5",
+					"host": [
+						"{{ClienteAPI}}"
+					],
+					"path": [
+						"risco",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

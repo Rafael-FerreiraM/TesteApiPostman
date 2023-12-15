@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "5e49bada-6b48-4046-9385-b3447802fa9b",
+		"name": "Teste API CTG 2.0",
+		"description": "Testando API´s",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30401850"
+	},
+	"item": [
+		{
+			"name": "Pegar Todos os Clientes",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ClienteAPI}}",
+					"host": [
+						"{{ClienteAPI}}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Novo Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"idade\": 36,\r\n\"nome\": \"Jonas Dlce\",\r\n\"risco\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ClienteAPI}}/cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Dados do Cliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1001,\r\n  \"idade\": 23,\r\n  \"nome\": \"Rafael Ferreira Mel\",\r\n  \"risco\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{ClienteAPI}}/cliente",
+				"description": "Atualiza dados de um cliente"
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Clientes",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{ClienteAPI}}/cliente/1001",
+				"description": "Deletar Clientes"
+			},
+			"response": []
+		}
+	]
+}
